@@ -19,10 +19,41 @@ function generatePassword() {
     alert("Invalid response! Retry");
     var Length = prompt("How long is your password? (choose between 8-127)");
   }
+  
+  //confirmation of variables
   var choseUpper = confirm("Click Ok to include upper case letters");
-  var choseLower = ("Click Ok to include lower case letters");
-  var choseNumbers = ("Click Ok to include Numbers");
-  var ChoseSpecial = ("Click Ok to include special charachters");
+  var choseLower = confirm("Click Ok to include lower case letters");
+  var choseNumbers = confirm("Click Ok to include Numbers");
+  var choseSpecial = confirm("Click Ok to include special charachters");
+
+  var passwordCharacters = [];
+      
+  if (choseUpper) {
+    passwordCharacters = passwordCharacters.concat(Upper)
+  }
+
+  if (choseLower) {
+    passwordCharacters = passwordCharacters.concat(Lower)
+  }
+
+  if (choseNumbers) {
+    passwordCharacters = passwordCharacters.concat(Numbers)
+  }
+
+  if (choseSpecial) {
+    passwordCharacters = passwordCharacters.concat(specialCharachters)
+  }
+
+
+  console.log(passwordCharacters)
+
+      var createdPassword = ""
+      
+      for (var i = 0; i < Length; i++) {
+        createdPassword = createdPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+        console.log(createdPassword)
+      }
+      return createdPassword;
 
 }
 
