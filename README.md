@@ -12,7 +12,7 @@ A website that creates unique passwords
 https://jbedford18.github.io/random-passwords/
 
 ## Screenshot
-![alt text]Capture.PNG
+![alt text](Assets\images\Capture.PNG)
 
 ## Contribution
 Made by Justin
